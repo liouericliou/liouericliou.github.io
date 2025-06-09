@@ -1,0 +1,183 @@
+{\rtf1\ansi\ansicpg950\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 :root \{\
+    --bg-color: #ffffff;\
+    --text-color: #2c3e50;\
+    --header-bg: #2c3e50;\
+    --header-text: #ecf0f1;\
+    --accent-color: #3498db;\
+    --card-bg: #ecf0f1;\
+    --footer-bg: #2c3e50;\
+    --footer-text: #bdc3c7;\
+\}\
+body \{\
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', sans-serif;\
+    margin: 0;\
+    background-color: var(--bg-color);\
+    color: var(--text-color);\
+    line-height: 1.7;\
+\}\
+.container \{\
+    max-width: 1200px;\
+    margin: 0 auto;\
+    padding: 0 25px;\
+\}\
+header \{\
+    background: var(--header-bg);\
+    color: var(--header-text);\
+    padding: 3rem 0;\
+    text-align: center;\
+\}\
+header h1 \{\
+    margin: 0;\
+    font-size: 2.8rem;\
+    font-weight: 300;\
+\}\
+header .subtitle \{\
+    margin: 0.5rem 0 0 0;\
+    font-size: 1.3rem;\
+    color: var(--accent-color);\
+    font-weight: 300;\
+\}\
+section \{\
+    padding: 3.5rem 0;\
+    border-bottom: 1px solid #e0e0e0;\
+\}\
+h2 \{\
+    text-align: center;\
+    margin-bottom: 2.5rem;\
+    font-size: 2.2rem;\
+    font-weight: 400;\
+    position: relative;\
+\}\
+h2::after \{\
+    content: '';\
+    display: block;\
+    width: 60px;\
+    height: 3px;\
+    background: var(--accent-color);\
+    margin: 10px auto 0;\
+\}\
+#awards ul \{\
+    list-style: none;\
+    padding: 0;\
+    text-align: center;\
+    font-size: 1.1em;\
+\}\
+#awards li \{\
+    margin-bottom: 0.5rem;\
+\}\
+#awards b \{\
+    color: var(--accent-color);\
+\}\
+.portfolio-grid \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\
+    gap: 25px;\
+\}\
+.portfolio-item \{\
+    background: var(--card-bg);\
+    cursor: pointer;\
+    position: relative;\
+    overflow: hidden;\
+    aspect-ratio: 16 / 9;\
+    border-radius: 8px;\
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);\
+    transition: transform 0.3s ease, box-shadow 0.3s ease;\
+\}\
+.portfolio-item:hover \{\
+    transform: translateY(-5px);\
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);\
+\}\
+.portfolio-item img \{\
+    width: 100%;\
+    height: 100%;\
+    object-fit: cover;\
+    transition: opacity 0.5s ease;\
+\}\
+.portfolio-item .overlay \{\
+    position: absolute;\
+    bottom: 0;\
+    left: 0;\
+    right: 0;\
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);\
+    color: white;\
+    padding: 40px 20px 20px 20px;\
+    opacity: 1;\
+    transition: opacity 0.3s ease;\
+\}\
+.portfolio-item:hover .overlay \{\
+    opacity: 1;\
+\}\
+.overlay h3 \{ margin: 0 0 5px 0; font-size: 1.2rem; \}\
+.overlay p \{ margin: 0; font-size: 0.9em; opacity: 0.8; \}\
+footer \{\
+    text-align: center;\
+    padding: 3rem 0;\
+    background: var(--footer-bg);\
+    color: var(--footer-text);\
+\}\
+footer p \{ margin: 0.5rem 0; \}\
+.modal \{\
+    display: none;\
+    position: fixed;\
+    z-index: 1000;\
+    left: 0; top: 0;\
+    width: 100%; height: 100%;\
+    background-color: rgba(0,0,0,0.85);\
+    overflow-y: auto;\
+    backdrop-filter: blur(5px);\
+\}\
+.modal-content \{\
+    background-color: #fff;\
+    margin: 5% auto;\
+    padding: 25px 45px 45px 45px;\
+    border: none;\
+    border-radius: 8px;\
+    width: 85%;\
+    max-width: 900px;\
+    position: relative;\
+    animation: slideIn 0.4s;\
+\}\
+.modal-content h3 \{ font-size: 1.8rem; margin-bottom: 1rem; color: var(--accent-color); \}\
+.modal-content p \{ line-height: 1.8; \}\
+.close \{\
+    color: #aaa;\
+    position: absolute;\
+    top: 15px; right: 25px;\
+    font-size: 40px;\
+    font-weight: 300;\
+    cursor: pointer;\
+    transition: color 0.2s;\
+\}\
+.close:hover, .close:focus \{ color: var(--text-color); \}\
+.video-container \{\
+    position: relative;\
+    padding-bottom: 56.25%;\
+    height: 0;\
+    overflow: hidden;\
+    margin-bottom: 1.5rem;\
+    border-radius: 8px;\
+\}\
+.video-container iframe \{\
+    position: absolute;\
+    top: 0; left: 0;\
+    width: 100%;\
+    height: 100%;\
+\}\
+@keyframes slideIn \{\
+    from \{transform: translateY(-50px); opacity: 0;\}\
+    to \{transform: translateY(0); opacity: 1;\}\
+\}\
+@media (max-width: 768px) \{\
+    header h1 \{ font-size: 2.2rem; \}\
+    h2 \{ font-size: 1.8rem; \}\
+    .modal-content \{ width: 95%; margin: 10% auto; padding: 20px; \}\
+    .portfolio-grid \{ grid-template-columns: 1fr; \}\
+\}\
+}
